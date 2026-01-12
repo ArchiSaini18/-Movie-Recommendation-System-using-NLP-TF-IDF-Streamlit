@@ -59,27 +59,7 @@ The project is deployed as a Streamlit web app with the following flow:
 
 • Source: Kaggle
 
-• Features:
-
-• movie_id
-
-• name
-
-• description
-
-• language
-
-• released
-
-• rating
-
-• writer
-
-• director
-
-• cast
-
-• genre
+• Features:movie_id,name,description,language,released,rating,writer,director,cast,genre
 
 **Target**: Unsupervised learning (similarity-based recommendations)
 
