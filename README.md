@@ -1,83 +1,157 @@
-🎬 **Movie Recommendation System using NLP & TF-IDF**
+🎬 **Movie Recommendation System using NLP & TF-IDF & Streamlit**
 
-This project builds a content-based movie recommendation engine using NLP techniques. By analyzing movie descriptions and metadata with TF-IDF Vectorization and applying
-Nearest Neighbors similarity search, we recommend movies similar to a user’s choice. The goal is to help users quickly discover new titles aligned with their interests.
+This project implements a content-based movie recommendation system using Natural Language Processing (NLP) techniques. By analyzing movie descriptions and metadata with TF-IDF Vectorization and applying cosine similarity via Nearest Neighbors, the system recommends movies similar to a user’s selected title.
+
+To enhance usability, the recommendation engine is deployed as an interactive web application using Streamlit, complete with user authentication (Login & Sign-Up) and a dedicated recommendation interface.
 
 📌 Project Overview
 
 In this project, we:
 
-• Load and preprocess movie dataset (movie_id,description	,language	,released,rating,writer,	director,	cast,	genre,	name).
+• Load and preprocess a movie dataset containing:
+movie_id, name, description, language, release year, rating, writer, director, cast, and genre
 
-• Use TF-IDF Vectorizer to transform movie overviews/plots into numerical vectors.
+• Perform text preprocessing (cleaning, tokenization, stopword removal, lemmatization)
 
-• Apply cosine similarity with Nearest Neighbors to find movies with the most similar content.
+• Convert movie descriptions into numerical representations using TF-IDF Vectorizer
 
-• Build a recommendation pipeline that suggests top N similar movies for a given title.
+• Apply cosine similarity with Nearest Neighbors to identify movies with similar content
 
-• Evaluate recommendations qualitatively and refine features (e.g.,name,description).
+• Build a recommendation pipeline that suggests the Top-N most similar movies
 
-📂 Dataset
+• Develop a Streamlit web application with:
 
-• Source: Kaggle .
+• User Login & Sign-Up system
 
-• Typical Features: movie_id,description	,language	,released,rating,writer,	director,	cast,	genre,name.
+• Secure session-based authentication
 
-• Target: Unsupervised (recommendations based on similarity).
+• Separate recommendation page after login
 
-🛠️ Technologies Used
+• Evaluate recommendations qualitatively for relevance and interpretability
+
+🌐 **Web Application (Streamlit)**
+
+The project is deployed as a Streamlit web app with the following flow:
+
+🔐 Authentication Module
+
+• User Sign-Up with username and password
+
+• User Login using stored credentials
+
+• Persistent user handling using a database / file storage
+
+• Automatic redirection to the recommendation page after login
+
+🎥 **Recommendation Interface**
+
+• Movie selection via dropdown
+
+• One-click recommendation generation
+
+• Displays Top 5 similar movies
+
+• Expandable movie descriptions for better exploration
+
+• Clean UI with dark theme styling
+
+📂 **Dataset**
+
+• Source: Kaggle
+
+• Features:
+
+• movie_id
+
+• name
+
+• description
+
+• language
+
+• released
+
+• rating
+
+• writer
+
+• director
+
+• cast
+
+• genre
+
+**Target**: Unsupervised learning (similarity-based recommendations)
+
+🛠️ **Technologies Used**
 
 • Python 3.x
 
-• Pandas, NumPy – data handling
+• Pandas, NumPy – data processing
 
 • Scikit-learn – TF-IDF Vectorizer, Nearest Neighbors
 
-• NLTK / SpaCy – text preprocessing (stopwords, tokenization, stemming/lemmatization)
+• NLTK / SpaCy – text preprocessing
 
-• Matplotlib / Seaborn / WordCloud – visualization
+• Streamlit – interactive web application
 
-📊 Model Selection & Evaluation
+• Matplotlib / Seaborn / WordCloud – data visualization
 
-• TF-IDF Vectorizer to represent movie plots as weighted word features.
+📊 **Model Selection & Evaluation**
 
-• Cosine Similarity with Nearest Neighbors for similarity ranking.
+• TF-IDF Vectorizer to represent movie descriptions as weighted feature vectors
 
-• Evaluate by checking recommendations for popular movies.
+• Cosine similarity with Nearest Neighbors for similarity ranking
 
-• Human interpretability is key – recommendations must feel relevant.
+• Manual evaluation by checking recommendations for well-known movies
 
-📈 Visualizations
+• Emphasis on human interpretability — recommendations must feel relevant
 
-• Word clouds of frequent terms per genre.
+📈 **Visualizations**
 
-• Distribution of TF-IDF weights across documents.
+• Word clouds for frequent terms per genre
 
-• Heatmap of cosine similarity scores between movies.
+• Distribution of TF-IDF feature weights
 
-• Recommendation examples: input vs. top 5 suggested titles.
+• Heatmap of cosine similarity scores
 
-🧭 Workflow
+• Recommendation examples:
 
-Movie Data → Text Preprocessing (cleaning, tokenizing, stopwords removal) → TF-IDF Vectorization → Nearest Neighbors Similarity → Recommendation Pipeline
+• Input movie vs. Top-5 suggested titles
+
+🧭 **Workflow**
+
+Movie Data
+→ Text Preprocessing
+→ TF-IDF Vectorization
+→ Nearest Neighbors Similarity
+→ Recommendation Pipeline
+→ Streamlit Web App
 → Visualization & Evaluation
 
-💼 Deliverables:
+💼 **Deliverables**
 
-• Cleaned dataset with preprocessed text fields
+• Cleaned and preprocessed movie dataset
 
 • Trained TF-IDF + Nearest Neighbors model
 
-• Recommendation function (get_recommendations("Movie Title"))
+• Recommendation function:
+get_recommendations("Movie Title")
 
-• Report showcasing sample recommendations per genre
+• Streamlit application with Login & Recommendation pages
 
-• Script/notebook for deploying recommendation system
+• Report showcasing sample recommendations
 
-🔮 Future Improvements
+• Deployment-ready Python scripts / notebooks
 
-• Hybrid model: combine content-based with collaborative filtering (user ratings).
+🔮 **Future Improvements**
 
-• Deploy an interactive Streamlit/Gradio app where users can search movies.
+• Hybrid recommendation system (content-based + collaborative filtering)
 
-• A/B test recommendations with real users to measure engagement uplift.
+• User-based personalization using ratings history
+
+• Cloud deployment (AWS / Azure / Streamlit Cloud)
+
+• A/B testing recommendations to measure user engagement
+
+• Advanced NLP models (Word2Vec, BERT embeddings)
