@@ -21,11 +21,11 @@ movie_id, name, description, language, release year, rating, writer, director, c
 
 • Develop a Streamlit web application with:
 
-• User Login & Sign-Up system
+   • User Login & Sign-Up system
 
-• Secure session-based authentication
+   • Secure session-based authentication
 
-• Separate recommendation page after login
+   • Separate recommendation page after login
 
 • Evaluate recommendations qualitatively for relevance and interpretability
 
