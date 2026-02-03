@@ -90,8 +90,11 @@ You can easily expand this dataset or connect it to an API like TMDB for real‑
 📸 **Screenshots**
 
 link : https://github.com/ArchiSaini18/-Movie-Recommendation-System-using-NLP-TF-IDF-Streamlit/blob/main/Screenshot%202026-02-03%20190359.png
+
 link : https://github.com/ArchiSaini18/-Movie-Recommendation-System-using-NLP-TF-IDF-Streamlit/blob/main/Screenshot%202026-02-03%20190427.png
+
 link : https://github.com/ArchiSaini18/-Movie-Recommendation-System-using-NLP-TF-IDF-Streamlit/blob/main/Screenshot%202026-02-03%20190442.png
+
 link : https://github.com/ArchiSaini18/-Movie-Recommendation-System-using-NLP-TF-IDF-Streamlit/blob/main/Screenshot%202026-02-03%20190455.png
 
 🤝 **Contributing**
