@@ -1,144 +1,120 @@
-🎬 **Movie Recommendation System using NLP & TF-IDF & Streamlit**
+🎬 **FilmyX AI – Smart Movie Recommendation System**
 
-This project implements a content-based movie recommendation system using Natural Language Processing (NLP) techniques. By analyzing movie descriptions with TF-IDF Vectorization and computing cosine similarity via Nearest Neighbors, the system recommends movies that are most similar to a user-selected title.
+FilmyX AI is a content‑based movie recommendation web app built with Python, Streamlit, and Machine Learning. It helps users discover movies similar to the ones they 
+love using intelligent text analysis and similarity matching.
 
-To enhance usability and accessibility, the recommendation engine is deployed as an interactive web application using Streamlit, featuring user authentication (Login & Sign-Up) and a dedicated recommendation interface.
+🚀 **Features**
 
-📌 Project Overview
+• 🎯 Personalized Movie Recommendations using ML
 
-In this project, we:
+• 🔍 Search by Favorite Movie
 
-• Load and preprocess a movie dataset containing:
+• 🎲 Surprise Me random movie picker
 
-  • movie_id, name, description, language, release_year, rating, writer, director, cast, genre
+• 🎛️ Advanced Filters
 
-• Perform text preprocessing:
+    • Release year range
 
-• Text cleaning
+    • Minimum IMDb rating
 
-• Tokenization
+    • Genre selection
 
-• Stopword removal
+• 🎨 Modern UI with custom CSS, animations, and movie cards
 
-• Lemmatization
+• 🧠 ML‑Powered Similarity Engine (TF‑IDF + Cosine Similarity)
 
-• Convert movie descriptions into numerical vectors using TF-IDF Vectorizer
+• 🧠 How It Works
 
-• Apply cosine similarity with Nearest Neighbors to identify similar movies
+**FilmyX AI uses a content‑based recommendation system**:
 
-• Build a recommendation pipeline that returns the Top-N most similar movies
+• Combines movie genres, director, cast, and plot overview into a single feature set
 
-• Develop a Streamlit web application with:
+• Converts text features into numerical vectors using TF‑IDF Vectorization
 
-• User Login & Sign-Up system
+• Measures similarity between movies using Cosine Similarity
 
-• Secure session-based authentication
+• Recommends movies most similar to the selected title
 
-• Separate recommendation interface after login
+🛠️ **Technology Stack**
 
-• Evaluate recommendations qualitatively for relevance and interpretability
+• Frontend: Streamlit + Custom CSS
 
-🌐 **Web Application** (Streamlit)
+• Backend: Python
 
-The project is deployed as a Streamlit web app with the following flow:
+• Machine Learning:
 
-🔐 **Authentication Module**
+   • Scikit‑learn
 
-• User Sign-Up with username and password
+   • TF‑IDF Vectorizer
 
-• User Login using stored credentials
+   • Cosine Similarity
 
-• Persistent user management via file-based database (CSV)
+• **Data Handling**: Pandas, NumPy
 
-• Automatic redirection to the recommendation page after successful login
+• **Images**: TMDB Poster URLs
 
-🎥 **Recommendation Interface**
+🎥 **Dataset**
 
-• Movie selection via dropdown
+The app uses a curated dataset of 40 popular and critically acclaimed movies, including:
 
-• One-click recommendation generation
+•  Title
 
-• Displays Top 5 similar movies
+•  Genres
 
-• Expandable movie descriptions for better exploration
+•  Director
 
-• Clean, modern dark-themed UI
+•  Cast
 
-📂 **Dataset**
+•  Plot overview
 
-• Source: Kaggle
+•  Release year
 
-• Features:
+•  IMDb rating
 
-• movie_id, name, description, language, released, rating, writer, director, cast, genre
+•  Movie poster URL
 
-• Learning Type: Unsupervised learning (similarity-based recommendation)
+You can easily expand this dataset or connect it to an API like TMDB for real‑time data.
 
-🛠️ **Technologies Used**
+🌟 **Future Improvements**
 
-• Python 3.x
+•  🔗 TMDB API integration for dynamic data
 
-• Pandas, NumPy – data processing
+•  👤 User profiles & watch history
 
-• Scikit-learn – TF-IDF Vectorizer, Nearest Neighbors
+•  🤖 Hybrid recommendation system (content + collaborative)
 
-• NLTK / SpaCy – text preprocessing
+•  📱 Mobile‑optimized UI
 
-• Streamlit – interactive web application
+•  ❤️ Favorite & watch‑later lists
+ 
+📸 **Screenshots**
 
-• Matplotlib / Seaborn / WordCloud – data visualization
+link : https://github.com/ArchiSaini18/-Movie-Recommendation-System-using-NLP-TF-IDF-Streamlit/blob/main/Screenshot%202026-02-03%20190359.png
+link : https://github.com/ArchiSaini18/-Movie-Recommendation-System-using-NLP-TF-IDF-Streamlit/blob/main/Screenshot%202026-02-03%20190427.png
+link : https://github.com/ArchiSaini18/-Movie-Recommendation-System-using-NLP-TF-IDF-Streamlit/blob/main/Screenshot%202026-02-03%20190442.png
+link : https://github.com/ArchiSaini18/-Movie-Recommendation-System-using-NLP-TF-IDF-Streamlit/blob/main/Screenshot%202026-02-03%20190455.png
 
-📊 **Model Selection & Evaluation**
+🤝 **Contributing**
 
-• TF-IDF Vectorizer to represent movie descriptions as weighted feature vectors
+•  Contributions are welcome!
 
-• Cosine similarity with Nearest Neighbors for similarity ranking
+•  Fork the repository
 
-• Manual evaluation by inspecting recommendations for popular movies
+•  Create a new branch
 
-• Emphasis on human interpretability — recommendations should feel relevant and intuitive
+•  Commit your changes
 
-📈 **Visualizations**
+•  Open a pull request
 
-• Word clouds showing frequent terms per genre
 
-• Distribution of TF-IDF feature weights
+💖 **Acknowledgements**
 
-• Heatmap of cosine similarity scores
+• Streamlit
 
-• Recommendation examples:
+•  Scikit‑learn
 
-  • Input movie vs. Top-5 suggested titles
+• TMDB (for poster images)
 
-🧭 **Workflow**
+🎬 **Built with ❤️ using Python, Streamlit, and Machine Learning**
 
-Movie Data → Text Preprocessing → TF-IDF Vectorization → Nearest Neighbors Similarity → Recommendation Pipeline → Streamlit Web App → Visualization & Evaluation
-
-💼 **Deliverables**
-
-• Cleaned and preprocessed movie dataset
-
-• Trained TF-IDF + Nearest Neighbors model
-
-• Recommendation function:
-
-get_recommendations("Movie Title")
-
-
-• Streamlit application with Login & Recommendation pages
-
-• Report showcasing sample recommendations
-
-• Deployment-ready Python scripts / notebooks
-
-🔮 **Future Improvements**
-
-• Hybrid recommendation system (content-based + collaborative filtering)
-
-• User-based personalization using ratings history
-
-• Cloud deployment (AWS / Azure / Streamlit Cloud)
-
-• A/B testing recommendations to measure user engagement
-
-• Advanced NLP models (Word2Vec, FastText, BERT embeddings)
+Happy movie discovering!
