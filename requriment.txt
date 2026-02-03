@@ -1,0 +1,10 @@
+📋 Requirements
+
+Add the following to your requirements.txt:
+
+streamlit
+pandas
+numpy
+scikit-learn
+requests
+Pillow
